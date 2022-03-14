@@ -366,3 +366,26 @@ export const getshopFoodList = (id) => {
     }
   })
 }
+export const addFood = (foodDetail) => {
+  // eslint-disable-next-line camelcase
+
+  return request({
+    url: '/shopping/addfood',
+    method: 'post',
+    params: foodDetail
+  })
+}
+export const addShop = (shopDetail) => {
+  return request({
+    url: '/shopping/addshop',
+    method: 'post',
+    params: shopDetail
+  })
+}
+export const foodCategory = (latitude, longitude) => {
+  return request({
+    url: '/shopping/v2/restaurant/category',
+    method: 'get',
+    params: { latitude, longitude }
+  })
+}

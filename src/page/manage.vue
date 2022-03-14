@@ -7,8 +7,9 @@
       ></el-col>
       <el-col :span="18">
         <div class="grid-content bg-purple">
-            <div class="contain">
-                        <head-top />
+           <head-top />
+            <div class="contain" >
+
           <router-view />
             </div>
         </div>
@@ -25,6 +26,7 @@ export default {
     siderMenu,
     headTop
   }
+
 }
 </script>
 <style lang="less" scoped>

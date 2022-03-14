@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import echarts from 'echarts/lib/echarts'
+import * as echarts from 'echarts/lib/echarts.js'
 // 引入柱状图
 import 'echarts/lib/chart/bar'
 import 'echarts/lib/chart/line'

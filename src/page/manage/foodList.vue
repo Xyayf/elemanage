@@ -148,6 +148,17 @@
   </div>
 </el-dialog>
 </div>
+<div class="pagination">
+      <el-pagination
+  background
+  layout="total, prev, pager, next, jumper"
+  :total='total'
+  :page-size='20'
+  @current-change='handleCurrentChange'
+
+  >
+</el-pagination>
+</div>
 </div>
 
 </template>
@@ -342,6 +353,10 @@ export default {
         this.$message.error('上传头像图片大小不能超过 2MB!')
       }
       return isJPG && isLt2M
+    },
+    handleCurrentChange (e) {
+      const offset = (e - 1) * 20
+      this.getfoodLists(20, offset)
     }
 
   }
